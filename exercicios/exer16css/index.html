@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{ color: darkred;
+        }
+        a:visited{ color: blue;}
+        a:hover{ text-decoration: underline;}
+        a::after{ 
+            content:'[link]' ;
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>pagina principal</h1>
+    <ul>
+        <li><a href="pag01.html" target="_blank">clique aqui pragina test01</a></li>
+        <li><a href="pag02.html">para acessar pag02 clique aqui</a></li>
+        <li><a href="https://pt.wikipedia.org/wiki/Aura" target="_blank">para acessar pagina externa clike aqui</a></li>
+    </ul>
+    
+</body>
+</html>
