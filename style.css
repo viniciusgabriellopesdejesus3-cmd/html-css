@@ -1,0 +1,85 @@
+@charset "utf-8";
+@font-face{
+    font-family: 'android';
+    src:url(fontes/idroid.otf)format('opentype')
+     
+}
+
+:root{
+    --fonte-padrão:arial, verdana, helvetica, sans-serif;
+    --fonte-android:'android',cursive;
+}
+body{
+            background-color: #c9dfd2;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        header{
+            text-align: center;
+            background-color: #117041;
+            color: #edf7f2;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 40px;
+            min-height: 150px;
+        }
+
+         header > h1{
+            font-family: var(--fonte-android);
+            text-align: center;
+            margin: bottom 20px;
+            text-shadow: 2px,2px,0px,black;
+         
+         }
+         header > p{
+            font-size: 1,5em;
+            margin:auto
+         }
+        nav{
+            background-color: #063b1d;
+            color: white;
+            padding: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 0px, 7px, 9px color(rgb(2, 156, 2));
+        }
+        
+          nav > a{
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bolder;
+            transition-duration: 1s;
+          }
+          nav > a:hover{
+            background-color: #1a5c37;
+            color:white;
+          }
+
+        main{
+              min-width: 300px;
+            max-width: 1000px;
+            margin: auto;
+            paddin: 20px;
+            box-shadow: 0px 0px 10px black;
+        }
+        main > h1{
+            color: #1a5c37;
+          
+            
+           
+        }
+        main > h2{
+            color:#2fa866            
+        }
+        main img{ 
+            width: 100%;
+        }
+        aside{
+            background-color: #54cc8a;
+        }
+        aside > ul{
+            columns:2;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
