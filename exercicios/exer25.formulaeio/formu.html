@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>cadastre no formulario</h1>
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <form action="cadastro.php" method="post" autocomplete="on">
 
         <fieldset>
             <legend>sexo</legend>
@@ -45,6 +45,26 @@
             <legend> nivel de satisfação</legend>
             <label for="inivel"> nivel </label>
             <input type="range" name="nivel" id="inivel">
+        </fieldset>
+
+        <fieldset>
+            <legend>unidades por cidades</legend>
+
+            <label for="icida">cidades</label>
+            <select name="cidade" id="icida">
+                <option value="ro">vilhena legado matriz</option>
+                <option value="ro">cerejeiras bushido leg</option>
+                <option value="ro">colorado matshubara</option>
+                <option value="ro">corumbiaria legado</option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <legend> mesagem de melhorias ou reclamações</legend>
+        <p>
+            <label for="imsg">digite aqui</label>
+            <textarea name="msg" id="imsg"></textarea>
+        </p>
         </fieldset>
 
 
