@@ -43,8 +43,13 @@
 
         <fieldset>
             <legend> nivel de satisfação</legend>
-            <label for="inivel"> nivel </label>
-            <input type="range" name="nivel" id="inivel">
+
+            <p>
+                <label for="inum"> numero </label>
+                <input type="range" name="num" id="inum" min="1" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+                <output id="ival">5</output>
+            </p>
+            
         </fieldset>
 
         <fieldset>
@@ -58,6 +63,37 @@
                 <option value="ro">corumbiaria legado</option>
             </select>
         </fieldset>
+
+        <fieldset>
+            <legend>somatória</legend>
+            <p>
+                <label for="in1">numero1:</label>
+                <input type="number" name="n1" id="in1" min="0" max="50" oninput="isoma.innerHTML = Number( in1.value) + numer( in2.value)"> <br>
+                <label for="in2">numero2:</label>
+                <input type="number" name="n2" id="in2" min="0" max="50" oninput="isoma.innerHTML = Number( in1.value) + Number( in2.value)">
+            
+            </p>
+            <p>
+                <label for="isoma">soma: </label>
+                <output name="soma" id="isoma">0</output>
+            </p>
+        </fieldset>
+
+        <fieldset> 
+            <legend>sua idade</legend>
+            <p>
+            <label for="iano">em que ano voçe nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2040" oninput="calcIdade()">
+          </p>
+
+          <p>
+            <label for="iidade">sua idade é: </label>
+            <output id="iidade">0</output>
+          </p>
+
+
+
+        </fieldset>
         
         <fieldset>
             <legend> mesagem de melhorias ou reclamações</legend>
@@ -65,15 +101,21 @@
             <label for="imsg">digite aqui</label>
             <textarea name="msg" id="imsg"></textarea>
         </p>
-        </fieldset>
+          </fieldset>
 
-
-
-        <p>
+          <p> <p>
            <input type="submit" value="anviar">
            <input type="reset" value="limpar">
-        </p>
+        </p></p>
+
     </form>
+     
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
     
 </body>
 </html>
