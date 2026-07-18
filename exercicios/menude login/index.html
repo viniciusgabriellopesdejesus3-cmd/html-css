@@ -4,10 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <style>
+        *{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body, html {
+    background-color: #c4c1c1;
+    height: 100vw;
+    width: 100vw;
+
+
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vh;
+}
+
+section#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: rgb(245, 242, 242);
+    width: 250px;
+    height: 520px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+}
+
+section#login > div#imagem {
+    display: block;
+    background:#5f2c82 url(imagem/images.jpg) no-repeat;
+    background-size: cover;
+    height:250px;
+}
+
+section#login > div#formulario {
+    display: block;
+    padding: 10px;
+}
+
+form > input[type=submit] {  
+    display: block;
+    font-size: 1em;
+     width: 100%;
+     height: 40px;
+     background-color: rgb(87, 88, 168);
+     color: aquamarine;
+     border: none;
+     border-radius: 5px
+}
+form>input[type=submit]:hover{
+    background-color: black;
+}
+
+form> a.botão {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #2d6462;
+    border: 1px solid #49a09d;
+    
+}
+form>div.campo{
+    height: 40px;
+}
+
+div.campo>label{
+    display: none;
+}
+
+ 
+ 
+
+</style>
+
+
+
     <link rel="https://fonts.googleapis.com/icon?family=material+Icons" rel="stylesheet">
    
     <link rel="stylesheet" href="estilos/mediaqueri.css">
     <link rel="stylesheet" href="estilos/style.css">
+
+   
+
 </head>
 <body>
     <main>
@@ -20,12 +112,12 @@
             <div id="formulario"> 
 
                 <h1>login</h1>
-                <p> seja bem vindo(a) faça seu login para acessar sua conta e poder fazer as consfigurações no seu ambiente</p>
+                <p> seja bem vindo(a) faça seu login para acessar sua conta </p>
                 <form action="login.php" method="post">
                     <div class="campo">
                         
                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q14-36 44-58t68-22q38 0 68 22t44 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm301.5-678.5Q510-807 510-820t-8.5-21.5Q493-850 480-850t-21.5 8.5Q450-833 450-820t8.5 21.5Q467-790 480-790t21.5-8.5ZM200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm379-235q41-41 41-99t-41-99q-41-41-99-41t-99 41q-41 41-41 99t41 99q41 41 99 41t99-41ZM280-200h400v-10q-42-35-93-52.5T480-280q-56 0-107 17.5T280-210v10Zm157.5-337.5Q420-555 420-580t17.5-42.5Q455-640 480-640t42.5 17.5Q540-605 540-580t-17.5 42.5Q505-520 480-520t-42.5-17.5ZM480-503Z"/></svg>
-                        <input type="email" name="login" id="ilogin" placeholder="seu email">
+                        <input type="email" name="login" id="ilogin" placeholder="seu email" required maxlength="30" >
                          <label for="ilogin">login</label>
 
                     </div>
@@ -33,13 +125,13 @@
                     <div class="campo">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M223.5-423.5Q200-447 200-480t23.5-56.5Q247-560 280-560t56.5 23.5Q360-513 360-480t-23.5 56.5Q313-400 280-400t-56.5-23.5ZM280-240q-100 0-170-70T40-480q0-100 70-170t170-70q67 0 121.5 33t86.5 87h352l120 120-180 180-80-60-80 60-85-60h-47q-32 54-86.5 87T280-240Zm0-80q56 0 98.5-34t56.5-86h125l58 41 82-61 71 55 75-75-40-40H435q-14-52-56.5-86T280-640q-66 0-113 47t-47 113q0 66 47 113t113 47Z"/></svg>
                         
-                        <input type="password" name="senha" id="isenha" placeholder="sua senha">
+                        <input type="password" name="senha" id="isenha" placeholder="sua senha" required minlength="5" maxlength="10">
                         <label for="isenha">senha</label>
 
                     </div>
                     <input type="submit" value="entrar">
-                    <a href="esqueci a senha">
-                        esqueci a senha <i class="material-icons">mail</i>
+                    <a href="esqueci a senha" class="botão">
+                        esqueci a senha <i class="material-icons"> do email</i>
                          
                     </a>
 
